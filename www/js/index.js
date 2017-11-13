@@ -7,6 +7,7 @@ $(document).on("pagecreate","#pageone",function(){
        var dice = (Math.round(Math.random()*10));
           if (dice <= 5)  {
               dunno = true;
+              navigator.notification.beep;
           }
           else if (dice > 5)  {
               dunno = false;
