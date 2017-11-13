@@ -2,17 +2,15 @@
 
 $(document).on("pagecreate","#pageone",function(){
   
-  	$('#tapholdtext').on("taphold",function(){
-    	$(this).hide();
- 	});                       
-
 	$('#taptext').on("tap",function(){
-    	$(this).css('color', 'red');
- 	}); 
-
-	$('#swipetext').on("swipeleft",function(){
-    	$(this).css('color', 'green');
-  	});   
-
-
+       var dunno = true;
+       var dice = (Math.round(Math.random()*10));
+          if (dice <= 5)  {
+              dunno = true;
+          }
+          else if (dice > 5)  {
+              dunno = false;
+          };
+    $("#myNumber").text(dunno);
 });
+ 	});
