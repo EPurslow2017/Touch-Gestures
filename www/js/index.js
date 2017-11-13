@@ -7,9 +7,11 @@ $(document).on("pagecreate","#pageone",function(){
        var dice = (Math.round(Math.random()*10));
           if (dice <= 5)  {
               dunno = true;
+              navigator.notification.beep(1);	//beep once
           }
           else if (dice > 5)  {
               dunno = false;
+              navigator.notification.beep(2);	//beep twice
           };
     $("#myNumber").text(dunno);
 });
